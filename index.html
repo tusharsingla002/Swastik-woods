@@ -1,29 +1,17 @@
-<!DOCTYPE html>
+
 <html>
 <head>
     <title>Swastik Wood Works</title>
-<style>
-    html, body {
-        margin: 0;
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
-    }
-    iframe {
-        width: 100%;
-        height: 100%;
-        border: none;
-    }
-</style>
 </head>
+<style> html, body { margin: 0; width: 100%; height: 100%; overflow: hidden; } iframe { width: 100%; height: 100%; border: none; } 
+</style>
 <body>
-    <iframe id="catalogFrame"></iframe>
-<script>
-    fetch('catalog.txt')
-        .then(response => response.text())
-        .then(url => {
-            document.getElementById('catalogFrame').src = url.trim();
-        });
-</script>
+    <script>
+        fetch('catalog.txt')
+            .then(response => response.text())
+            .then(url => {
+                window.location.replace(url.trim());
+            });
+    </script>
 </body>
 </html>
