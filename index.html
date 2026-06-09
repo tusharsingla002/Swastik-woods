@@ -1,1 +1,15 @@
-<a href="swastik-woods.pdf" target="_blank">View My PDF</a>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Swastik Wood Works</title>
+</head>
+<body>
+    <script>
+        fetch('catalog.txt')
+            .then(response => response.text())
+            .then(url => {
+                window.location.replace(url.trim());
+            });
+    </script>
+</body>
+</html>
